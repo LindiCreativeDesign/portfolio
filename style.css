@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 html {
@@ -13,7 +13,7 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 65%, darkgoldenrod 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 65%, #f6d992 100%);
 }
 
 .main-container {
@@ -32,6 +32,22 @@ body {
     position: relative;
     bottom: 0;
     height: 60px;
+}
+
+.flex {
+    display: flex;
+}
+
+img {
+    max-height: 60dvh;
+    max-width: 70dvw;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.width-50 {
+    width: 50%;
 }
 
 .navbar-wrapper {
@@ -104,7 +120,6 @@ body {
 }
 
 .intro-bow-wrapper {
-    display: flex;
     justify-content: center;
 }
 
@@ -141,5 +156,43 @@ body {
 
     .intro-box p {
         font-size: 16px;
+    }
+}
+
+.portfolio-wrapper .portfolio-data {
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+
+.portfolio-wrapper .portfolio-text {
+    font-size: 48px;
+}
+.portfolio-wrapper .portfolio-name {
+    font-size: 36px;
+}
+.portfolio-wrapper .portfolio-desc {
+    font-weight: bold;
+}
+
+.portfolio-wrapper .portrait {
+    justify-content: right;
+}
+
+@media (max-width: 768px) {
+    .portfolio-wrapper {
+        flex-flow: column-reverse;
+    }
+
+    .portfolio-wrapper .portfolio-data {
+        padding: 20px 0 0 0;
+    }
+
+    .portfolio-wrapper .width-50 {
+        width: 100%;
+    }
+
+    .portfolio-wrapper > .portrait {
+        justify-content: center;
     }
 }
