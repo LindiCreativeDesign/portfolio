@@ -62,10 +62,11 @@ img {
     margin: 0 5dvw;
 }
 
-.navbar .logo {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
+.navbar .logo img {
+    width: 60px;
+    background-color: #333;
+    border: none;
+    box-shadow: none;
 }
 
 .navbar-links {
@@ -159,28 +160,68 @@ img {
     }
 }
 
+.portfolio-wrapper {
+    margin-top: 10dvh;
+}
+
 .portfolio-wrapper .portfolio-data {
     text-align: center;
     margin: auto;
     padding: 20px;
 }
 
-.portfolio-wrapper .portfolio-text {
-    font-size: 48px;
+.portfolio-header {
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
 }
-.portfolio-wrapper .portfolio-name {
-    font-size: 36px;
+
+.portfolio-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to left, #ff00cc, #6b0303);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
 }
-.portfolio-wrapper .portfolio-desc {
-    font-weight: bold;
+
+.portfolio-header h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.portfolio-header p {
+    font-size: 1.5rem;
+    color: #8d8d8d;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .portfolio-wrapper .portrait {
-    justify-content: right;
+    justify-content: center;
+}
+
+.portfolio-wrapper .portrait img {
+    border-radius: 10px;
 }
 
 @media (max-width: 768px) {
     .portfolio-wrapper {
+        margin-top: 5dvh;
         flex-flow: column-reverse;
     }
 
@@ -190,9 +231,5 @@ img {
 
     .portfolio-wrapper .width-50 {
         width: 100%;
-    }
-
-    .portfolio-wrapper > .portrait {
-        justify-content: center;
     }
 }
