@@ -272,7 +272,6 @@ img {
     transform: translateY(0);
 }
 
-/* Reszponzivitás */
 @media (max-width: 1024px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
@@ -282,5 +281,95 @@ img {
 @media (max-width: 600px) {
     .grid-container {
         grid-template-columns: 1fr;
+    }
+}
+
+/* MUNKÁIM ALOLDALAK */
+
+.theme-title {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #333;
+    position: relative;
+    font-weight: 700;
+}
+
+.theme-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff00cc, #6b0303);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.gallery-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.arrow {
+    font-size: 2.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+    z-index: 1000;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.15);
+}
+
+.arrow.left {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow.right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.gallery-container {
+    height: 60dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-image {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .arrow {
+        font-size: 1.8rem;
+        width: 40px;
+        height: 40px;
     }
 }
