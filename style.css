@@ -31,7 +31,7 @@ body {
 }
 
 .footer::before {
-    content: "© 2025 Lindi Creative Design. Minden jog fenntartva.";
+    content: "© 2025 Creative Design Lindi. Minden jog fenntartva.";
 }
 
 .main-container {
@@ -471,4 +471,19 @@ img {
     .feedback-container {
         flex-wrap: wrap;
     }
+}
+
+/* KAPCSOLAT */
+
+.contact-info {
+    margin-top: 60px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+.contact-info strong {
+    color: #0F6466;
 }
