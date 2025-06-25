@@ -380,3 +380,47 @@ img {
         height: 40px;
     }
 }
+
+/* VIDEÓK */
+
+.video-columns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.video-column {
+    flex: 1;
+    margin: 2px;
+}
+
+.video-column:first-child {
+    margin-left: 0;
+}
+
+.video-column:last-child {
+    margin-right: 0;
+}
+
+.video-columns > .video-column iframe {
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: 45dvh;
+}
+
+@media screen and (max-width: 992px) {
+    .video-columns .video-column {
+        flex-basis: 100%;
+        display: block;
+        padding-bottom: 10px;
+        margin: auto;
+        text-align: center;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
