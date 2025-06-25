@@ -414,13 +414,6 @@ img {
 @media (max-width: 992px) {
     .video-columns .video-column {
         flex-basis: 100%;
-        display: block;
         padding-bottom: 10px;
-        margin: auto;
-        text-align: center;
-    }
-
-    iframe {
-        width: 100%;
     }
 }
